@@ -1,8 +1,9 @@
 import { View, Text, ImageBackground, Image } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
-import { images } from '../constants/images'
-import { icons } from '../constants/icons'
+import { images } from '@/constants/images'
+import { icons } from '@/constants/icons'
+
 
 const TabIcon = ({focused ,icon, title}:any) => {
     if(focused){
@@ -60,7 +61,8 @@ const _layout = () => {
                 tabBarIcon: ({ focused }) => (
                     <TabIcon 
                     focused ={focused}
-                    icon={icons.home} title="Home"
+                    icon={icons.home} 
+                    title="Home"
                     />
                 )
                 
