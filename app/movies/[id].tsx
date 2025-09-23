@@ -1,9 +1,11 @@
 import { icons } from '@/constants/icons'
+import { images } from '@/constants/images'
 import { fetchMovieDetails } from '@/services/api'
+import { isMovieSaved, removeMovie, saveMovie } from '@/services/appwrite'
 import useFetch from '@/services/useFetch'
 import { router, useLocalSearchParams } from 'expo-router'
-import React from 'react'
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { Image, ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
 interface MovieInfoProps{
   label:string;
@@ -30,6 +32,45 @@ const MovieDetails = () => {
     const {data: movie,loading} = useFetch(()=>
       fetchMovieDetails(id as string));
 
+
+//yeni kaydetme denemesi
+
+const [isSaved, setIsSaved] = useState(false);
+const userId = "guest-user"; // ileride Appwrite auth’tan gelecek
+
+useEffect(() => {
+  if (movie) {
+    (async () => {
+      const saved = await isMovieSaved(userId, movie.id);
+      setIsSaved(saved);
+    })();
+  }
+}, [movie]);
+
+const toggleSave = async () => {
+  if (!movie) return;
+
+  if (isSaved) {
+    await removeMovie(userId, movie.id);
+    setIsSaved(false);
+  } else {
+    const payload = {
+      id: movie.id,
+      title: movie.title,
+      poster_path: movie.poster_path,
+      vote_average: movie.vote_average,
+      release_date: movie.release_date,
+    };
+
+    console.log("Saving movie payload:", payload); // 🔍 kontrol için log
+
+    await saveMovie(userId, payload as Movie);
+    setIsSaved(true);
+  }
+};
+//--------------
+
+
   return (
 
     <View className='bg-primary flex-1 '>
@@ -37,7 +78,21 @@ const MovieDetails = () => {
       
       
       <ScrollView contentContainerStyle={{paddingBottom:80}}>
+        <View>
         <Image source={{uri:`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}} className="w-full h-[550px]" resizeMode='stretch'/>
+          <TouchableOpacity onPress={toggleSave}>
+        <ImageBackground
+          source={images.highlight}
+          className="absolute size-12 bottom-[-20px] right-10 items-center justify-center rounded-2xl overflow-hidden"
+        >
+          <Image
+            className="size-7"
+            tintColor={isSaved ? "red" : "white"} // ✅ Kaydedilmişse kırmızı, değilse beyaz
+            source={icons.heart}
+          />
+        </ImageBackground>
+      </TouchableOpacity>
+        </View>
         <View className='flex-col items-start justify-centermt-5 px-5'>
           <Text className="text-white font-bold text-3xl mt-5">
             {movie?.title}

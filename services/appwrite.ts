@@ -1,6 +1,7 @@
 // tack the search made by a user
 const DATABASE_ID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;
 const COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID!;
+const SAVED_COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_SAVED_COLLECTION_ID!;
 
 import { Client, Databases, ID, Query } from "appwrite";
 const client = new Client()
@@ -75,3 +76,64 @@ export const getTrendingMovies = async(): Promise<TrendingMovie[] | undefined> =
 
 
 }
+
+// 🎬 Kaydet
+/*
+export const saveMovie = async (userId: string, movie: Movie) => {
+  return database.createDocument(DATABASE_ID, SAVED_COLLECTION_ID, ID.unique(), {
+    userId,
+    movieId: movie.id,
+    title: movie.title,
+    posterPath: movie.poster_path,
+    vote_average: movie.vote_average,
+    release_date: movie.release_date,  
+  });
+}; 
+*/
+export const saveMovie = async (userId: string, movie: Movie | MovieDetails) => {
+  const payload = {
+    userId,
+    movieId: movie.id,
+    title: movie.title,
+    posterPath: movie.poster_path ?? "",
+    vote_average: Number(movie.vote_average ?? 0),
+    release_date: movie.release_date ?? "",
+  };
+
+  console.log("createDocument payload:", payload); // 🔍 burayı mutlaka gör
+
+  return database.createDocument(
+    DATABASE_ID,
+    SAVED_COLLECTION_ID,
+    ID.unique(),
+    payload
+  );
+};
+
+// 🗑 Çıkar
+export const removeMovie = async (userId: string, movieId: number) => {
+  const res = await database.listDocuments(DATABASE_ID, SAVED_COLLECTION_ID, [
+    Query.equal("userId", userId),
+    Query.equal("movieId", movieId),
+  ]);
+  if (res.total > 0) {
+    await database.deleteDocument(DATABASE_ID, SAVED_COLLECTION_ID, res.documents[0].$id);
+  }
+};
+
+// ❤️ Kontrol et
+export const isMovieSaved = async (userId: string, movieId: number) => {
+  const res = await database.listDocuments(DATABASE_ID, SAVED_COLLECTION_ID, [
+    Query.equal("userId", userId),
+    Query.equal("movieId", movieId),
+  ]);
+  return res.total > 0;
+};
+
+// 📋 Listele
+export const listSavedMovies = async (userId: string) => {
+  const res = await database.listDocuments(DATABASE_ID, SAVED_COLLECTION_ID, [
+    Query.equal("userId", userId),
+  ]);
+  return res.documents;
+};
