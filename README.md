@@ -61,37 +61,36 @@ npx expo start
 
 📱 Ekran Görüntüleri
 
-## 📸 Screenshots
 
 <table align="center">
   <tr>
     <td align="center">
       <b>Home</b><br/>
-      <img src="./assets/screenshots/home.jpg" alt="Home" width="250"/>
+      <img src="./assets/screenshots/home.jpg" alt="Home Page" width="%45"/>
     </td>
     <td align="center">
       <b>Search</b><br/>
-      <img src="./assets/screenshots/search.jpg" alt="Search" width="250"/>
+      <img src="./assets/screenshots/search.jpg" alt="Search Page" width="%45"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Search Empty</b><br/>
-      <img src="./assets/screenshots/searchempty.jpg" alt="Search Empty" width="250"/>
+      <img src="./assets/screenshots/searchempty.jpg" alt="Search Page With No Searh Paramether" width="%45"/>
     </td>
     <td align="center">
       <b>Saved</b><br/>
-      <img src="./assets/screenshots/saved.jpg" alt="Saved" width="250"/>
+      <img src="./assets/screenshots/saved.jpg" alt="Saved Screen" width="%45"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Detail</b><br/>
-      <img src="./assets/screenshots/detail.jpg" alt="Detail" width="250"/>
+      <img src="./assets/screenshots/detail.jpg" alt=" Movie Detail Screen" width="%45"/>
     </td>
     <td align="center">
       <b>Profile</b><br/>
-      <img src="./assets/screenshots/profile.jpg" alt="Profile" width="250"/>
+      <img src="./assets/screenshots/profile.jpg" alt="Profile Page" width="%45"/>
     </td>
   </tr>
 </table>
