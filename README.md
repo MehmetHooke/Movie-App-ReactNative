@@ -66,31 +66,31 @@ npx expo start
   <tr>
     <td align="center">
       <b>Home Page</b><br/>
-      <img src="./assets/screenshots/home.jpg" alt="Home Page" width="%35"/>
+      <img src="./assets/screenshots/home.jpg" alt="Home Page" width="%25"/>
     </td>
     <td align="center">
       <b>Search Pag</b><br/>
-      <img src="./assets/screenshots/search.jpg" alt="Search Page" width="%35"/>
+      <img src="./assets/screenshots/search.jpg" alt="Search Page" width="%25"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Search Page With No Searh Paramether</b><br/>
-      <img src="./assets/screenshots/searchempty.jpg" alt="Search Page With No Searh Paramether" width="%35"/>
+      <img src="./assets/screenshots/searchempty.jpg" alt="Search Page With No Searh Paramether" width="%25"/>
     </td>
     <td align="center">
       <b>Saved Screen</b><br/>
-      <img src="./assets/screenshots/saved.jpg" alt="Saved Screen" width="%35"/>
+      <img src="./assets/screenshots/saved.jpg" alt="Saved Screen" width="%25"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Movie Detail Screen</b><br/>
-      <img src="./assets/screenshots/detail.jpg" alt="Movie Detail Screen" width="%35"/>
+      <img src="./assets/screenshots/detail.jpg" alt="Movie Detail Screen" width="%25"/>
     </td>
     <td align="center">
       <b>Profile Page</b><br/>
-      <img src="./assets/screenshots/profile.jpg" alt="Profile Page" width="%35"/>
+      <img src="./assets/screenshots/profile.jpg" alt="Profile Page" width="%25"/>
     </td>
   </tr>
 </table>
