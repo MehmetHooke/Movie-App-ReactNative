@@ -61,20 +61,42 @@ npx expo start
 
 📱 Ekran Görüntüleri
 
+
 <p align="center">
-  <img src="./assets/screenshots/home.jpg" alt="Home" width="45%" style="padding:10px"/>
-  <img src="./assets/screenshots/search.jpg" alt="Search" width="45%"style="padding:10px"/>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Home</h4>
+    <img src="./assets/screenshots/home.jpg" alt="Home" width="300"/>
+  </div>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Search</h4>
+    <img src="./assets/screenshots/search.jpg" alt="Search" width="300"/>
+  </div>
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/searchempty.jpg" alt="Search Empty" width="45%"style="padding:10px"/>
-  <img src="./assets/screenshots/saved.jpg" alt="Saved" width="45%"style="padding:10px"/>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Search Empty</h4>
+    <img src="./assets/screenshots/searchempty.jpg" alt="Search Empty" width="300"/>
+  </div>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Saved</h4>
+    <img src="./assets/screenshots/saved.jpg" alt="Saved" width="300"/>
+  </div>
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/detail.jpg" alt="Detail" width="45%"style="padding:10px"/>
-  <img src="./assets/screenshots/profile.jpg" alt="Profile" width="45%"style="padding:10px"/>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Detail</h4>
+    <img src="./assets/screenshots/detail.jpg" alt="Detail" width="300"/>
+  </div>
+  <div style="display: inline-block; margin: 15px;">
+    <h4 align="center">Profile</h4>
+    <img src="./assets/screenshots/profile.jpg" alt="Profile" width="300"/>
+  </div>
 </p>
+
+
+
 
 Anasayfa
 
