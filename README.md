@@ -61,23 +61,20 @@ npx expo start
 
 📱 Ekran Görüntüleri
 
-### 🏠 Home Screen
-![Home](./assets/screenshots/home.jpg)
+<p align="center">
+  <img src="./home.jpg" alt="Home" width="45%"/>
+  <img src="./search.jpg" alt="Search" width="45%"/>
+</p>
 
-### 🔍 Search Screen
-![Search](./assets/screenshots/search.jpg)
+<p align="center">
+  <img src="./searchempty.jpg" alt="Search Empty" width="45%"/>
+  <img src="./saved.jpg" alt="Saved" width="45%"/>
+</p>
 
-### 🔍 Search (Empty State)
-![Search Empty](./assets/screenshots/searchempty.jpg)
-
-### ⭐ Saved Movies
-![Saved](./assets/screenshots/saved.jpg)
-
-### 📄 Movie Detail
-![Detail](./assets/screenshots/detail.jpg)
-
-### 👤 Profile
-![Profile](./assets/screenshots/profile.jpg)
+<p align="center">
+  <img src="./detail.jpg" alt="Detail" width="45%"/>
+  <img src="./profile.jpg" alt="Profile" width="45%"/>
+</p>
 
 Anasayfa
 
