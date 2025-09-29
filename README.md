@@ -1,50 +1,103 @@
-# Welcome to your Expo app 👋
+🎬 MovieFlix
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MovieFlix, React Native + Expo ile geliştirilmiş, TMDB API ve Appwrite entegrasyonu sayesinde film arama, detay görüntüleme ve favorilere kaydetme özellikleri sunan bir mobil uygulamadır.
 
-## Get started
+🚀 Özellikler
 
-1. Install dependencies
+🔍 Film Arama: TMDB API üzerinden arama yaparak milyonlarca filme erişim.
 
-   ```bash
-   npm install
-   ```
+📰 Trend Filmler: Popüler ve trend olan filmleri anasayfada listeleme.
 
-2. Start the app
+❤️ Favorilere Kaydetme: Filmleri kaydet, istediğinde geri gel ve incele.
 
-   ```bash
-   npx expo start
-   ```
+📂 Saved Sayfası: Kaydedilen filmleri gerçek zamanlı Appwrite veritabanından çekme.
 
-In the output, you'll find options to open the app in a
+📄 Film Detayları: Oyuncular, özet, IMDB puanı, çıkış tarihi gibi detay bilgileri gör.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+🎨 Modern UI: Tailwind CSS (NativeWind) ile tasarlanmış sade ve şık arayüz.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🔒 (Gelecek) Kullanıcı giriş/çıkış sistemi (Appwrite Auth).
 
-## Get a fresh project
+🛠 Kullanılan Teknolojiler
 
-When you're ready, run:
+Frontend: React Native
+ + Expo
 
-```bash
-npm run reset-project
-```
+Router: Expo Router
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+UI: NativeWind
 
-## Learn more
+Backend: Appwrite
+ (Database & Auth)
 
-To learn more about developing your project with Expo, look at the following resources:
+API: TMDB API
+ (Film bilgileri)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+📦 Kurulum
 
-## Join the community
+Bu projeyi klonla:
 
-Join our community of developers creating universal apps.
+git clone https://github.com/kullanici-adi/movieflix.git
+cd movieflix
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+Bağımlılıkları yükle:
+
+npm install
+
+
+Ortam değişkenlerini ekle:
+Proje köküne .env dosyası oluştur ve şu değerleri ekle:
+
+EXPO_PUBLIC_MOVIE_API_KEY=TMDB_API_KEYIN
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=...
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=...
+EXPO_PUBLIC_APPWRITE_COLLECTION_ID=...
+
+
+Uygulamayı başlat:
+
+npx expo start
+
+📱 Ekran Görüntüleri
+
+### 🏠 Home Screen
+![Home](./assets/home.jpg)
+
+### 🔍 Search Screen
+![Search](./assets/search.jpg)
+
+### 🔍 Search (Empty State)
+![Search Empty](./assets/searchempty.jpg)
+
+### ⭐ Saved Movies
+![Saved](./assets/saved.jpg)
+
+### 📄 Movie Detail
+![Detail](./assets/detail.jpg)
+
+### 👤 Profile
+![Profile](./assets/profile.jpg)
+
+Anasayfa
+
+Film Detayları
+
+Kaydedilen Filmler (Saved)
+
+Profil
+
+🔮 Yol Haritası
+
+ Film arama ve listeleme
+
+ Film detay sayfası
+
+ Kaydetme ve çıkarma (Appwrite DB)
+
+
+👤 Geliştirici
+
+Mehmet Höke
+
+💼 Senior Mobil & Web Developer
