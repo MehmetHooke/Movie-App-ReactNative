@@ -61,39 +61,41 @@ npx expo start
 
 📱 Ekran Görüntüleri
 
+## 📸 Screenshots
 
-<p align="center">
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Home</h4>
-    <img src="./assets/screenshots/home.jpg" alt="Home" width="300"/>
-  </div>
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Search</h4>
-    <img src="./assets/screenshots/search.jpg" alt="Search" width="300"/>
-  </div>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <b>Home</b><br/>
+      <img src="./assets/screenshots/home.jpg" alt="Home" width="250"/>
+    </td>
+    <td align="center">
+      <b>Search</b><br/>
+      <img src="./assets/screenshots/search.jpg" alt="Search" width="250"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Search Empty</b><br/>
+      <img src="./assets/screenshots/searchempty.jpg" alt="Search Empty" width="250"/>
+    </td>
+    <td align="center">
+      <b>Saved</b><br/>
+      <img src="./assets/screenshots/saved.jpg" alt="Saved" width="250"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Detail</b><br/>
+      <img src="./assets/screenshots/detail.jpg" alt="Detail" width="250"/>
+    </td>
+    <td align="center">
+      <b>Profile</b><br/>
+      <img src="./assets/screenshots/profile.jpg" alt="Profile" width="250"/>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Search Empty</h4>
-    <img src="./assets/screenshots/searchempty.jpg" alt="Search Empty" width="300"/>
-  </div>
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Saved</h4>
-    <img src="./assets/screenshots/saved.jpg" alt="Saved" width="300"/>
-  </div>
-</p>
-
-<p align="center">
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Detail</h4>
-    <img src="./assets/screenshots/detail.jpg" alt="Detail" width="300"/>
-  </div>
-  <div style="display: inline-block; margin: 15px;">
-    <h4 align="center">Profile</h4>
-    <img src="./assets/screenshots/profile.jpg" alt="Profile" width="300"/>
-  </div>
-</p>
 
 
 
